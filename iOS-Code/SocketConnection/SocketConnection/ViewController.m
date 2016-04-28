@@ -8,20 +8,24 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate>
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)btnTapped:(id)sender {
+    [[[UIAlertView alloc] initWithTitle:@"Touch All Test"
+                                message:@"Wanna Back from this screen"
+                               delegate:self
+                      cancelButtonTitle:@"NO"
+                      otherButtonTitles:@"YES", nil] show];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end
