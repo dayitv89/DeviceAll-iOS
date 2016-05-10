@@ -1,4 +1,4 @@
-DeviceAll-iOS
+DeviceAll-iOS [Under Developement]
 ==============
 
 It is a testing project for iOS App Testing on multiple platform. Mostly we are facing the same problem that testing an app of same process for each device variants (models and os versions). That is so irritating for us.
